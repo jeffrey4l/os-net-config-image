@@ -1,0 +1,15 @@
+---
+network_config:
+  - type: linux_bond
+    name: bond1
+    use_dhcp: true
+    bonding_options: "mode=active-backup miimon=100"
+    members:
+      - type: interface
+        name: eth0
+  - type: vlan
+    vlan_id: 120
+    device: bond1
+    use_dhcp: false
+    addresses:
+      - ip_netmask: 172.18.0.5/24
