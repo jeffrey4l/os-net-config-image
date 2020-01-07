@@ -49,8 +49,9 @@ RUN USELESS="\
         --setopt=tsflags=nodocs \
         --setopt=override_install_langs=en_US.utf8 \
         install \
-        os-net-config \
         driverctl \
+        openvswitch \
+        os-net-config \
     && rpm -e --nodeps $USELESS \
     && yum clean all \
     && rm -rf /var/log/{lastlog,faillog,yum.log}

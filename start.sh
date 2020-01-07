@@ -2,7 +2,7 @@ docker run \
     --detach \
     --net host \
     --privileged \
-    --volume $(pwd)/config.yaml:/etc/os-net-config/config.yaml \
+    --volume /etc/os-net-config/:/etc/os-net-config/ \
     --volume /etc/driverctl.d:/etc/driverctl.d \
     --volume /etc/sysconfig/network-scripts:/etc/sysconfig/network-scripts  \
     --volume /lib/modules:/lib/modules:ro \
