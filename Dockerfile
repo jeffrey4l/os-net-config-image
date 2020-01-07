@@ -52,6 +52,8 @@ RUN USELESS="\
         driverctl \
         openvswitch \
         os-net-config \
+        libibverbs \
+        dpdk \
     && rpm -e --nodeps $USELESS \
     && yum clean all \
     && rm -rf /var/log/{lastlog,faillog,yum.log}
