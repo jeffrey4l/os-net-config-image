@@ -50,6 +50,7 @@ RUN USELESS="\
         --setopt=override_install_langs=en_US.utf8 \
         install \
         os-net-config \
+        driverctl \
     && rpm -e --nodeps $USELESS \
     && yum clean all \
     && rm -rf /var/log/{lastlog,faillog,yum.log}
