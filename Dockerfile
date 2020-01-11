@@ -45,6 +45,7 @@ RUN USELESS="\
         centos-release-openstack-train \
     && rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud \
     && rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Storage \
+    && yum update \
     && yum -y \
         --setopt=tsflags=nodocs \
         --setopt=override_install_langs=en_US.utf8 \
